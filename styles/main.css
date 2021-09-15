@@ -1,3 +1,103 @@
+body {
+    padding-left: 3em;
+    font-size: 16px;
+    line-height: 1.3;
+    display: grid;
+    grid-template-areas: "head nav" 
+                         "main nav"
+                         "foot foot";
+    grid-template-columns: 70em 1fr;
+    /*grid-template-rows: auto 1fr auto;*/
+}
+header {
+    grid-area: head;
+    padding-top: 1.33em; 
+}
+nav {
+    grid-area: nav;
+    align-content: right;
+    padding-top: 2.5em;
+    background-color: rgb(170, 170, 170);
+}
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    /* height: 250px; */
+    top: 2em;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+  }
+.openbtn {
+    position: fixed;
+    right: 0;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+.sidepanel ul li a:hover {
+    color: #f1f1f1;
+ }
+ .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+.sidepanel ul li a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    list-style-type: none;
+    /* background-color: yellow; */
+  }
+
+main {
+    grid-area: main;
+    /* background-color: blue; */
+}
+footer {
+    grid-area: foot;
+}
+/*STICKY CONTACT LINKS*/
+div.contactMe {
+    grid-area: contact;
+    padding-right: 2em;
+    position: fixed;
+    top: 40vh;
+    right: 0;
+    z-index: 1;
+    /* background-color: yellow; */
+}
+h1, h2, h3 {
+    line-height: 1.0;
+}
+p {
+    max-width: 60em;
+}
+nav > ul > li{
+    list-style-type: none;
+    text-align: right;
+    padding-right: 3em;
+    margin-left: 0;
+}
+body > nav ul {
+    list-style-type: none;
+}
 #resumeFrame {
     border: none;
 }
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+/* .sticky {
+    position: fixed;
+    width: 100%;
+  } */

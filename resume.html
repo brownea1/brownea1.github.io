@@ -1,61 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Ethan Brown</title>
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
 
-        <title>Ethan Brown</title>
-
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="icon" href="images/favicon.png">
-    </head>
-
-    <body id="resume">
-        <script src="scripts/main.js"></script>
-        <nav>
+<body id="resume">
+    <script src="scripts/main.js"></script>
+    <header><h1>Ethan Brown</h1></header>
+    <nav>
+        <div id="mySidepanel" class="sidepanel">
             <ul>
                 <li><a href="index.html">About Me</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="resume.html">Resume</a></li>
             </ul>
-        </nav>
+        </div>
+        <button class="openbtn" onclick="openNav()">☰ Toggle Sidepanel</button>
+    </nav>
+    
+    <main>
+        <h1>Resume</h1>
 
-        <main>
-            <h1>Resume</h1>
-            <iframe id="resumeFrame" src="EthanBrownResume.pdf" title="EthanBrownResume.pdf" width="65%" height="700px"></iframe>
+        <!--------OBJECTIVE-------->
+        <h2>Objective</h2>
+        <p>To obtain a job for the summer of 2022</p>
+        
+        <!--------EDUCATION-------->
+        <h2>Education</h2>
+        <h3><span id="degreeName">Bachelor of Science in Computer Science</span> May 2024, 3.95 GPA</h3>
+        <ul>
+            <li>Rose-Hulman Institute of Technology, Terre Haute, IN</li>
+        </ul>
+        <h3>Related Courses</h3>
+        <ul>
+            <li>Intro to Computer Systems</li>
+            <li>Object-Oriented Software Development</li>
+            <li>Data Structures and Algorithm Analysis</li>
+            <li>Intro to Web Development</li>
+            <li>Computer Science Research Lab</li>
+            <li>Introduction to Proofs</li>
+            <li>Combinatorics</li>
+            <li>Calculus I-III</li>
+            <li>Differential Equations I-II</li>
+            <li>Vector Calculus</li>
+        </ul>
 
-            <div id="extendedResume">
-                <h2>More Information Not Found on My Resume</h2>
-                <h3>Programming Skill</h3>
-                <ul>
-                    <li>Proficient in Java and C</li>
-                    <li>Experienced in Python, JavaScript and HTML</li>
-                </ul>
-                <h3>Personal Skills</h3>
-                <ul>
-                    <li>rhoncus dolor</li>
-                    <li>enim ut</li>
-                    <li>bibendum at</li>
-                </ul>
-                <h3>More Work Experiences</h3>
-                <ul>
-                    <li><h3>Texas Roadhouse Server</h3></li>
-                    <ul>
-                        <li>*DATES WORKED*</li>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A arcu cursus vitae congue mauris rhoncus aenean. Velit sed ullamcorper morbi tincidunt ornare. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Amet consectetur adipiscing elit duis tristique. Ut faucibus pulvinar elementum integer enim neque volutpat ac. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Viverra justo nec ultrices dui sapien. Eget dolor morbi non arcu risus quis varius quam. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing.</li>
-                    </ul>
-                </ul>
-            </div>
-        </main>
+        <!--------SKILLS-------->
+        <h2>Skills</h2>
+        <h3>Programming Skill</h3>
+        <ul>
+            <li>Proficient in Java and C</li>
+            <li>Experienced in Python, JavaScript and HTML</li>
+            <li>Ability and desire to learn more programming languages</li>
+        </ul>
+        <h3>Personal Skills</h3>
+        <ul>
+            <li>rhoncus dolor</li>
+            <li>enim ut</li>
+            <li>bibendum at</li>
+        </ul>
 
-        <footer>
-            <div class="contactMe">
-                <h1>Contact me!</h1>
-                <p>brownea1@rose-hulman.edu</p>
-            </div>
-        </footer>
-    </body>
+        <!--------EXPERIENCES-------->
+        <h2>Experiences</h2>
+        <ul>
+            <li>
+                <span class="employer">Rose-Hulman Institute of Technology, Terre Haute, IN</span>
+                <span class="dates">Winter 2021</span><br>
+                <span class="title">Genetic Algorithm Project</span>
+                <ul>
+                    <li>Designed an object-oriented program that emulates Darwin’s Theory of Natural Evolution, and allows for the population to be visualized and manipulated in an easy to digest way</li>
+                    <li>Communicated with a partner, and used GitHub version control</li>
+                    <li>Used the program to conduct experiments that were presented in a video format,
+                    and used the program to reproduce a hypothesis from a research paper</li>
+                </ul>
+            </li>
+            <li>
+                <span class="employer">Rose-Hulman Institute of Technology, Terre Haute, IN</span>
+                <span class="dates">Spring 2021</span><br>
+                <span class="title">Dijskstra’s algorithm graph pathing project</span>
+                <ul>
+                    <li>Worked in a group to construct a graph data structure and used Dijskstra’s algorithm to find the shortest path from one node to another</li>
+                    <li>Saved the graph to an XML file, which is loaded in at the start of the program</li>
+                    <li>Developed a user-friendly GUI that displays each node in the graph and the
+                    connections between nodes</li>
+                </ul>
+            </li>
+            <li>
+                <span class="employer">Codelicious, Indianapolis, IN</span>
+                <span class="dates">2017-2020</span><br>
+                <span class="title">Intern and Product Developer</span>
+                <ul>
+                    <li>Wrote and reviewed computer science curriculum over Java, JavaScript, the Godot Game Engine and Scratch that was sold to schools across the country</li>
+                    <li>Instructed computer science classes for summer camps on topics such as HTML, JavaScript Scratch, the Godot Game Engine, Python, and computer hardware</li>
+                    <li>Designed structure for the curriculum and gave input in team meetings</li>
+                </ul>
+            </li>
+            <li>
+                <span class="employer">Texas Roadhouse, Carmel, IN</span>
+                <span class="dates">Summer 2021</span><br>
+                <span class="title">Server</span>
+                <ul>
+                    <li>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                    <li>A arcu cursus vitae congue mauris rhoncus aenean. Velit sed ullamcorper morbi tincidunt ornare. Non pulvinar neque laoreet suspendisse interdum consectetur libero.</li>
+                    <li>Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Viverra justo nec ultrices dui sapien. Eget dolor morbi non arcu risus quis varius quam. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!--------ACTIVITIES AND HONORS-------->
+        <h2>Activities and Honors</h2>
+        <ul>
+            <li>Member of the Pi Kappa Alpha Fraternity <span class="activityDates">2021-Present</span></li>
+            <li>Member of the Alpha Lambda Delta Honors Fraternity <span class="activityDates">2021-Present</span></li>
+            <li>Mentor in CSSE Freshman Mentoring Program, Rose-Hulman Institute of Technology <span class="activityDates">2021-Present</span></li>
+            <li>Chess Club, Rose-Hulman Institute of Technology <span class="activityDates">2020-Present</span></li>
+            <li>Intramural Sports, Rose-Hulman Institute of Technology <span class="activityDates">2020-Present</span></li>
+            <li>Coder Dojo, Westfield High School <span class="activityDates">2019-2020</span></li>
+            <li>Math Club and Indiana Math League President, Westfield High School <span class="activityDates">2019-2020</span></li>
+            <li>Selected STEM Student, COMVEC <span class="activityDates">2019</span></li>
+            <li>Rose-Hulman Institute of Technology Fall, Winter and Spring Dean’s List <span class="activityDates">2020-2021</span></li>
+            <li>Rose-Hulman Merit Scholarship <span class="activityDates">2020</span></li>
+        </ul>
+
+
+        
+        <iframe id="resumeFrame" src="EthanBrownResume.pdf" title="EthanBrownResume.pdf" width="65%" height="700px"></iframe>
+    </main>
+    
+    <div class="contactMe">
+        <h1>Contact me!</h1>
+        <ul>
+            <li>brownea1@rose-hulman.edu</li>
+            <li>HANDSHAKE</li>
+            <li>LINKED IN</li>
+            <li>GITHUB</li>
+        </ul>
+    </div>
+    <footer>
+        <h2>FOOTER</h2>
+    </footer>
+</body>
 
 
 </html>
