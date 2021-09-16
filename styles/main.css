@@ -1,17 +1,121 @@
+:root {
+    --main-bg-color: #212121;
+    --head-foot-color: #424242;
+    --center-color: #757575;
+}
 body {
-    padding-left: 3em;
     font-size: 16px;
     line-height: 1.3;
+    background-color: var(--main-bg-color);
+    color: #F9F6EE;
     display: grid;
-    grid-template-areas: "head nav" 
+    /* grid-template-areas: "head nav" 
                          "main nav"
                          "foot foot";
-    grid-template-columns: 70em 1fr;
-    /*grid-template-rows: auto 1fr auto;*/
+    grid-template-columns: 70em 1fr; */
+    grid-template-areas: "navBtn head empty" 
+                         "main main contact"
+                         "foot foot foot"; 
+    grid-template-columns: 10vw 70vw 20vw;
+    grid-template-rows: auto 1fr auto;
+}
+header {
+    grid-area: head;
+    text-align: center;
+    color: #F9F6EE;
+    background-color: var(--head-foot-color);
+}
+nav {
+    grid-area: nav;
+
+    width: 0;
+    height: auto;
+    /* position: fixed; */
+    z-index: 1;
+    /* right: 10%; */
+    max-height: fit-content;
+    background-color: var(--head-foot-color);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+}
+.openbtn {
+    grid-area: navBtn;
+    align-content: center;
+    /* right: 0; */
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--head-foot-color);
+    color: white;
+    /* padding: 10px 15px; */
+    border: none;
+}
+.sidepanel ul li a:hover {
+    color: #a0a0a0;
+}
+.sidepanel ul li a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #F9F6EE;
+    transition: 0.3s;
+}
+.sidepanel ul {
+    list-style-type: none;
+    justify-content: center;
+}
+nav > ul > li{
+    text-align: center;
+    /* display: inline; */
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+main {
+    grid-area: main;
+    /* opacity: 60%; */
+    transition: 0.5s;
+    padding-right: 3em;
+    padding-left: 3em;
+    justify-content: center;
+    /* text-align: center; */
+    background-color: var(--center-color);
+    color: #F9F6EE;
+}
+main > h1 {
+    text-align: left;
+}
+.contactMe {
+    grid-area: contact;
+    padding-left: 3em;
+    background-color:forestgreen;
+}
+.contactMe > h1 {
+    text-align: left;
+    align-content: left;
+    align-self: left;
+}
+footer {
+    grid-area: foot;
+    text-align: center;
+    padding-left: 3em;
+    background-color: var(--head-foot-color);
+}
+.empty {
+    grid-area: empty;
+    background-color: var(--head-foot-color);
+}
+/* @media screen and (min-width 24em)  {
+    body {
+        
+    }
+} */
+/* .contactMe {
+    grid-area: contact
 }
 header {
     grid-area: head;
     padding-top: 1.33em; 
+    background-color: pink;
 }
 nav {
     grid-area: nav;
@@ -19,17 +123,53 @@ nav {
     padding-top: 2.5em;
     background-color: rgb(170, 170, 170);
 }
-.sidepanel  {
+main {
+    grid-area: main;
+    background-color: blue;
+}
+footer {
+    grid-area: foot;
+    background-color: orange;
+}
+h1, h2, h3 {
+    line-height: 1.0;
+}
+p {
+    max-width: 90%;
+}
+nav > ul > li{
+    list-style-type: none;
+    text-align: right;
+    padding-right: 3em;
+    margin-left: 0;
+}
+body > nav ul {
+    list-style-type: none;
+}
+#resumeFrame {
+    border: none;
+} */
+/*STICKY CONTACT LINKS*/
+/* div.contactMe {
+    grid-area: contact;
+    padding-right: 2em;
+    position: fixed;
+    top: 40vh;
+    right: 0;
+    z-index: 1;
+    background-color: rgb(170, 170, 170);
+} */
+/* .sidepanel  {
     width: 0;
     position: fixed;
     z-index: 1;
-    /* height: 250px; */
+    height: 100%;
     top: 2em;
     right: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    /* padding-top: 60px; */
+    padding-top: 60px;
   }
 .openbtn {
     position: fixed;
@@ -58,46 +198,4 @@ nav {
     display: block;
     transition: 0.3s;
     list-style-type: none;
-    /* background-color: yellow; */
-  }
-
-main {
-    grid-area: main;
-    /* background-color: blue; */
-}
-footer {
-    grid-area: foot;
-}
-/*STICKY CONTACT LINKS*/
-div.contactMe {
-    grid-area: contact;
-    padding-right: 2em;
-    position: fixed;
-    top: 40vh;
-    right: 0;
-    z-index: 1;
-    /* background-color: yellow; */
-}
-h1, h2, h3 {
-    line-height: 1.0;
-}
-p {
-    max-width: 60em;
-}
-nav > ul > li{
-    list-style-type: none;
-    text-align: right;
-    padding-right: 3em;
-    margin-left: 0;
-}
-body > nav ul {
-    list-style-type: none;
-}
-#resumeFrame {
-    border: none;
-}
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-/* .sticky {
-    position: fixed;
-    width: 100%;
   } */

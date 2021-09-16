@@ -1,6 +1,18 @@
+var state = false;
+
 function openNav() {
-    document.getElementById("mySidepanel").style.width = "24em";
+    let btn = document.getElementById("openbtn");
+    let sidebar = document.getElementById("mySidepanel");
+    let body = document.body;
+    if(!state){
+        sidebar.style.width = "10vw";
+        btn.innerHTML = "☰ Close";
+        body.style.gridTemplateAreas = '"navBtn head empty" "nav main contact" "foot foot foot"';
+    }
+    else{
+        sidebar.style.width = "0vw";
+        btn.innerHTML = "☰ Menu";
+        body.style.gridTemplateAreas = '"navBtn head empty" "main main contact" "foot foot foot"';
+    }
+    state = !state;
 }
-function closeNav() {
-    document.getElementById("mySidepanel").style.width = "0";
-  }
