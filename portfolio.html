@@ -1,70 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Portfolio</title>
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
 
-        <title>Portfolio</title>
-
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="icon" href="images/favicon.png">
-    </head>
-
-    <body id="portfolio">
-        <script src="scripts/main.js"></script>
-        <header>
-            <h1>Ethan Brown</h1>
-        </header>
-        
-        <nav id="mySidepanel" class="sidepanel">
-            <ul>
-                <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a></li>
-                <li><a href="index.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </nav>
-        <button id="openbtn" class="openbtn" onclick="openNav()">☰ Menu</button>
-
-        <main>
-            <h1>Portfolio</h1>
-
-            <ul id="portfolioItems">
-                <li>
-                    <h2><a href="#">CSSE230 graph traversal project</a></h2>
-                    <h3>*DATES I WORKED ON IT*</h3>
-                    <img src="images/graphProj">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit. Leo duis ut diam quam. Nam at lectus urna duis. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra.</p>
-                </li>
-                <li>
-                    <h2><a href="#">CSSE220 Genetic Algorithm Project</a></h2>
-                    <img src="images/geneticAlgoProj">
-                    <h3>*DATES I WORKED ON IT*</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit. Leo duis ut diam quam. Nam at lectus urna duis. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra.</p>
-                </li>
-                <li>
-                    <h2><a href="#">Senior EDD Project</a></h2>
-                    <img src="images/seniorEDDProj">
-                    <h3>*DATES I WORKED ON IT*</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit. Leo duis ut diam quam. Nam at lectus urna duis. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra.</p>
-                </li>
-            </ul>
-        </main>
-
-    </body>
-
-    <div class="contactMe">
-        <h1>Contact me!</h1>
+<body id="portfolio">
+    <script src="scripts/main.js"></script>
+    <header>
+        <h1>Ethan Brown</h1>
+    </header>
+    
+    <nav id="mySidepanel" class="sidepanel">
         <ul>
-            <li>brownea1@rose-hulman.edu</li>
-            <li>HANDSHAKE</li>
-            <li>LINKED IN</li>
-            <li>GITHUB</li>
+            <li><a href="index.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+    <button id="openbtn" class="openbtn" onclick="openNav()">☰ Menu</button>
+    
+    <main id="portfolioMain">
+        <h1>Portfolio</h1>
+        
+        <ul id="portfolioItems">
+            <li>
+                <h2><a href="#">CSSE230 Graph Traversal Project</a></h2>
+                <h3>Spring 2021</h3>
+                <ul class="projDetails">
+                    <li>Worked in a group to construct a graph data structure and used Dijskstra’s algorithm to find the shortest path from one node to another</li>
+                    <li>Saved the graph to an XML file, which is loaded in at the start of the program</li>
+                    <li>Developed a user-friendly GUI that displays each node in the graph and the connections between nodes</li>
+                </ul>
+            </li>
+            <li>
+                <h2><a href="#">CSSE220 Genetic Algorithm Project</a></h2>
+                <h3>Winter 2021</h3>
+                <ul class="projDetails">
+                    <li>Designed an object-oriented program that emulates Darwin’s Theory of Natural Evolution, and allows for the population to be visualized and manipulated in an easy to digest way</li>
+                    <li>Communicated with a partner, and used GitHub version control</li>
+                    <li>Used the program to conduct experiments that were presented in a video format, and used the program to reproduce a hypothesis from a research paper</li>
+                </ul>
+            </li>
+            <li>
+                <h2><a href="#">Senior EDD Project</a></h2>
+                <h3>*DATES I WORKED ON IT*</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tellus molestie nunc non blandit. Leo duis ut diam quam. Nam at lectus urna duis. Vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra.</p>
+            </li>
+        </ul>
+    </main>
+    
+    <ul class="images">
+        <li><img class="screencaps" id="graphProj" src="images/graphProj.PNG"></li>
+        <li><img class="screencaps" id="genAlgoProj" src="images/genAlgoProj.PNG"></li>
+    </ul>
+    
+        <!--<img class="screencaps" id="seniorProj" src="images/seniorEDDProj"> -->
+        
+    </body>
+    
+    <div class="contactMe lists">
+        <!-- <h1>Contact me!</h1> -->
+        <ul id="text">
+            <a href="mailto:brownea1@rose-hulman.edu" target="_blank"><li>brownea1@rose-hulman.edu</li></a>
+            <a href="https://rose-hulman.joinhandshake.com/users/26444952" target="_blank"><li>Handshake</li></a>
+            <a href="https://www.linkedin.com/in/ethan-brown-8a46141b2/" target="_blank"><li>LinkedIn</li></a>
+            <a href="https://github.com/easbrown02/EthanBrown" target="_blank"><li>GitHub</li></a> 
+        </ul>
+        <ul id="icons">
+            <a href="mailto:brownea1@rose-hulman.edu" target="_blank"></a>
+            <a href="https://rose-hulman.joinhandshake.com/users/26444952" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/ethan-brown-8a46141b2/" target="_blank"></a>
+            <a href="https://github.com/easbrown02/EthanBrown" target="_blank"></a> 
         </ul>
     </div>
     <footer>
-        <h2>FOOTER</h2>
+        <ul>
+            <li><a href="files/EthanBrownResume.pdf" download="EthanBrownResume">download my resume</a></li>
+            <li><a href="files/AcademicTranscript.pdf" download="EthanBrownAcademicTranscript">download my transcript</a></li>
+        </ul>
+        <p>Student at Rose-Hulman Institute of Technology</p>
+        <p>Software Engineering & Computer Science Double Major -- Mathematics Minor</p>
     </footer>
-
-</html>
+    
+    </html>

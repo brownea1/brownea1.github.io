@@ -1,40 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Nunito+Sans:wght@200&display=swap');
 :root {
     --main-bg-color: #212121;
-    --head-foot-color: #424242;
-    --center-color: #757575;
+    --head-foot-color: #303030;
+    --center-color: #424242;
+    --font-color: #F9F6EE;
 }
+
 body {
     font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
     line-height: 1.3;
     background-color: var(--main-bg-color);
+    background-image: linear-gradient(116deg, rgba(232, 232, 232, 0.03) 0%, rgba(232, 232, 232, 0.03) 10%,rgba(14, 14, 14, 0.03) 10%, rgba(14, 14, 14, 0.03) 66%,rgba(232, 232, 232, 0.03) 66%, rgba(232, 232, 232, 0.03) 72%,rgba(44, 44, 44, 0.03) 72%, rgba(44, 44, 44, 0.03) 81%,rgba(51, 51, 51, 0.03) 81%, rgba(51, 51, 51, 0.03) 100%),linear-gradient(109deg, rgba(155, 155, 155, 0.03) 0%, rgba(155, 155, 155, 0.03) 23%,rgba(30, 30, 30, 0.03) 23%, rgba(30, 30, 30, 0.03) 63%,rgba(124, 124, 124, 0.03) 63%, rgba(124, 124, 124, 0.03) 73%,rgba(195, 195, 195, 0.03) 73%, rgba(195, 195, 195, 0.03) 84%,rgba(187, 187, 187, 0.03) 84%, rgba(187, 187, 187, 0.03) 100%),linear-gradient(79deg, rgba(254, 254, 254, 0.03) 0%, rgba(254, 254, 254, 0.03) 27%,rgba(180, 180, 180, 0.03) 27%, rgba(180, 180, 180, 0.03) 33%,rgba(167, 167, 167, 0.03) 33%, rgba(167, 167, 167, 0.03) 34%,rgba(68, 68, 68, 0.03) 34%, rgba(68, 68, 68, 0.03) 63%,rgba(171, 171, 171, 0.03) 63%, rgba(171, 171, 171, 0.03) 100%),linear-gradient(109deg, rgba(71, 71, 71, 0.03) 0%, rgba(71, 71, 71, 0.03) 3%,rgba(97, 97, 97, 0.03) 3%, rgba(97, 97, 97, 0.03) 40%,rgba(40, 40, 40, 0.03) 40%, rgba(40, 40, 40, 0.03) 55%,rgba(5, 5, 5, 0.03) 55%, rgba(5, 5, 5, 0.03) 73%,rgba(242, 242, 242, 0.03) 73%, rgba(242, 242, 242, 0.03) 100%),linear-gradient(271deg, rgba(70, 70, 70, 0.03) 0%, rgba(70, 70, 70, 0.03) 11%,rgba(178, 178, 178, 0.03) 11%, rgba(178, 178, 178, 0.03) 23%,rgba(28, 28, 28, 0.03) 23%, rgba(28, 28, 28, 0.03) 72%,rgba(152, 152, 152, 0.03) 72%, rgba(152, 152, 152, 0.03) 86%,rgba(43, 43, 43, 0.03) 86%, rgba(43, 43, 43, 0.03) 100%),linear-gradient(90deg, rgb(27, 27, 27),rgb(1, 1, 1));    
     color: #F9F6EE;
     display: grid;
-    /* grid-template-areas: "head nav" 
-                         "main nav"
-                         "foot foot";
-    grid-template-columns: 70em 1fr; */
-    grid-template-areas: "navBtn head empty" 
-                         "main main contact"
-                         "foot foot foot"; 
-    grid-template-columns: 10vw 70vw 20vw;
+
+    grid-template-areas: "navBtn head head empty" 
+                         "nav main img contact"
+                          "foot foot foot foot";
+    grid-template-columns: 11vw 40vw 30vw 17vw;
     grid-template-rows: auto 1fr auto;
+}
+.images {
+    grid-area: img;
+    list-style-type: none;
+}
+#pfp {
+    width: 18vw;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    padding-right: 3em;
+}
+#graphProj {
+    width: 16vw;
+    padding: 4em .8em 1em 0em;
+    justify-self: center;
+    height: auto;
+}
+#genAlgoProj {
+    width: 27vw;
 }
 header {
     grid-area: head;
-    text-align: center;
-    color: #F9F6EE;
-    background-color: var(--head-foot-color);
+    text-align: left;
+    padding-left: 1em;
+    color: var(--font-color);
 }
+
 nav {
     grid-area: nav;
-
     width: 0;
     height: auto;
-    /* position: fixed; */
     z-index: 1;
-    /* right: 10%; */
     max-height: fit-content;
-    background-color: var(--head-foot-color);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 1em;
@@ -43,159 +62,120 @@ nav {
 .openbtn {
     grid-area: navBtn;
     align-content: center;
-    /* right: 0; */
-    font-size: 20px;
+    font-size: 1.3em;
     cursor: pointer;
-    background-color: var(--head-foot-color);
-    color: white;
-    /* padding: 10px 15px; */
+    background-color: #42424200;
+    color: var(--font-color);
     border: none;
 }
-.sidepanel ul li a:hover {
+.lists ul li a:hover {
     color: #a0a0a0;
+}
+footer ul li a:hover {
+    color: #a0a0a0;
+}
+.contactMe ul a li:hover {
+    background-color: #2e2e2e;
 }
 .sidepanel ul li a {
     text-decoration: none;
     font-size: 1.3em;
-    color: #F9F6EE;
+    color: var(--font-color);
     transition: 0.3s;
 }
 .sidepanel ul {
     list-style-type: none;
     justify-content: center;
 }
-nav > ul > li{
+.sidepanel > ul > li{
     text-align: center;
-    /* display: inline; */
     padding-top: 1.5em;
     padding-bottom: 1.5em;
 }
 main {
     grid-area: main;
-    /* opacity: 60%; */
     transition: 0.5s;
-    padding-right: 3em;
-    padding-left: 3em;
+    padding: 1em 3em 1em 4em;
     justify-content: center;
-    /* text-align: center; */
-    background-color: var(--center-color);
-    color: #F9F6EE;
+    background-color: #42424270;
+    color: var(--font-color);
 }
 main > h1 {
-    text-align: left;
-}
-.contactMe {
-    grid-area: contact;
-    padding-left: 3em;
-    background-color:forestgreen;
-}
-.contactMe > h1 {
-    text-align: left;
-    align-content: left;
-    align-self: left;
+    text-align: center;
 }
 footer {
     grid-area: foot;
     text-align: center;
-    padding-left: 3em;
-    background-color: var(--head-foot-color);
+    /* padding-left: 3em; */
+}
+footer ul {
+    list-style-type: none;
+    padding-top: 3em;
+    padding-bottom: 0.7em;
+}
+footer ul li {
+    display: inline;
+    padding: 1.5em 3em 2em 3em;
+}
+footer ul li a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+footer p {
+    text-align: center;
+    max-width: 100%;
+    line-height: .8 ;
 }
 .empty {
     grid-area: empty;
-    background-color: var(--head-foot-color);
 }
-/* @media screen and (min-width 24em)  {
-    body {
-        
-    }
-} */
-/* .contactMe {
-    grid-area: contact
-}
-header {
-    grid-area: head;
-    padding-top: 1.33em; 
-    background-color: pink;
-}
-nav {
-    grid-area: nav;
-    align-content: right;
-    padding-top: 2.5em;
-    background-color: rgb(170, 170, 170);
-}
-main {
-    grid-area: main;
-    background-color: blue;
-}
-footer {
-    grid-area: foot;
-    background-color: orange;
-}
+/* header: position */
 h1, h2, h3 {
     line-height: 1.0;
 }
 p {
     max-width: 90%;
 }
-nav > ul > li{
-    list-style-type: none;
-    text-align: right;
-    padding-right: 3em;
-    margin-left: 0;
-}
-body > nav ul {
-    list-style-type: none;
-}
-#resumeFrame {
-    border: none;
-} */
-/*STICKY CONTACT LINKS*/
-/* div.contactMe {
+
+.contactMe {
     grid-area: contact;
-    padding-right: 2em;
-    position: fixed;
-    top: 40vh;
-    right: 0;
-    z-index: 1;
-    background-color: rgb(170, 170, 170);
-} */
-/* .sidepanel  {
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    height: 100%;
-    top: 2em;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-.openbtn {
+    align-self: center;
+    justify-self: right;
+    text-align: right;
+    padding-right: 1em;
+
     position: fixed;
     right: 0;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-  }
-.sidepanel ul li a:hover {
-    color: #f1f1f1;
- }
- .sidepanel .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-  }
-.sidepanel ul li a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+    top: 30%;
+}
+.contactMe > ul {
     list-style-type: none;
-  } */
+}
+.contactMe > ul > a > li {
+    margin-top: .3em;
+    margin-bottom: .3em;
+    padding: .5em .4em .5em .4em;
+    background-color: var(--head-foot-color);
+}
+.contactMe > ul > a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+.projDetails {
+    list-style-type: '- ';
+}
+#portfolioItems {
+    list-style-type: none;
+    justify-content: left;
+}
+#portfolioItems a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+#portfolioItems a:hover {
+    color: #a0a0a0;
+}
+#portfolioMain {
+    justify-content: left;
+    padding: 1em 3em 1em 2em;
+}

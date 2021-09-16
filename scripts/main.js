@@ -7,12 +7,12 @@ function openNav() {
     if(!state){
         sidebar.style.width = "10vw";
         btn.innerHTML = "☰ Close";
-        body.style.gridTemplateAreas = '"navBtn head empty" "nav main contact" "foot foot foot"';
+        // body.style.gridTemplateAreas = '"navBtn head empty" "nav main contact" "foot foot foot"';
     }
     else{
         sidebar.style.width = "0vw";
         btn.innerHTML = "☰ Menu";
-        body.style.gridTemplateAreas = '"navBtn head empty" "main main contact" "foot foot foot"';
+        // body.style.gridTemplateAreas = '"navBtn head empty" "main main contact" "foot foot foot"';
     }
     state = !state;
 }
