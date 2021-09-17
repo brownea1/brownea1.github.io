@@ -75,7 +75,9 @@ footer ul li a:hover {
     color: #a0a0a0;
 }
 .contactMe ul a li:hover {
-    background-color: #2e2e2e;
+    background-position: 0 100%;
+    background-color: #727272;
+    color: #eeeeee;
 }
 .sidepanel ul li a {
     text-decoration: none;
@@ -140,6 +142,7 @@ p {
 .contactMe {
     grid-area: contact;
     align-self: center;
+    align-content: center;
     justify-self: right;
     text-align: right;
     padding-right: 1em;
@@ -152,14 +155,38 @@ p {
     list-style-type: none;
 }
 .contactMe > ul > a > li {
+    line-height: 0;
+    display: flex;
+    justify-content: space-between;
+    /* display: inline; */
+    align-self: center;
     margin-top: .3em;
     margin-bottom: .3em;
     padding: .5em .4em .5em .4em;
     background-color: var(--head-foot-color);
+
+
+    /*animation*/
+    background: linear-gradient(to right, #727272 50%, var(--head-foot-color) 50%, var(--head-foot-color));
+    background-clip: text;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+    
+}
+.contactMe p {
+    max-width: 100%;
+    font-size: 15px;
+    /* justify-self: right; */
 }
 .contactMe > ul > a {
     text-decoration: none;
     color: var(--font-color);
+}
+.contactMe img {
+    padding-right: .8em;
 }
 .projDetails {
     list-style-type: '- ';
@@ -179,3 +206,20 @@ p {
     justify-content: left;
     padding: 1em 3em 1em 2em;
 }
+#resume ul {
+    list-style-type: none;
+    /* padding: 1em 2em 1em 1em; */
+}
+#experienceList li ul {
+    list-style-type: circle;
+}
+/* .contactMe img {
+    align-self: center;
+    justify-self: left;
+    left: 0;
+} */
+/* #resumeFrame {
+    justify-self: center;
+    align-self: center;
+    border: none;
+} */

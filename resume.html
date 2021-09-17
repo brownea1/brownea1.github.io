@@ -26,13 +26,14 @@
     </nav>
     <button id="openbtn" class="openbtn" onclick="openNav()">☰ Menu</button>
     
-    <main>
+    <main id="resume">
         <h1>Resume</h1>
 
         <!--------OBJECTIVE-------->
         <h2>Objective</h2>
         <p>To obtain a job for the summer of 2022</p>
-        
+        <hr>
+
         <!--------EDUCATION-------->
         <h2>Education</h2>
         <h3><span id="degreeName">Bachelor of Science in Computer Science</span> May 2024, 3.95 GPA</h3>
@@ -52,6 +53,7 @@
             <li>Differential Equations I-II</li>
             <li>Vector Calculus</li>
         </ul>
+        <hr>
 
         <!--------SKILLS-------->
         <h2>Skills</h2>
@@ -67,10 +69,11 @@
             <li>enim ut</li>
             <li>bibendum at</li>
         </ul>
+        <hr>
 
         <!--------EXPERIENCES-------->
         <h2>Experiences</h2>
-        <ul>
+        <ul id="experienceList">
             <li>
                 <span class="employer">Rose-Hulman Institute of Technology, Terre Haute, IN</span>
                 <span class="dates">Winter 2021</span><br>
@@ -114,6 +117,7 @@
                 </ul>
             </li>
         </ul>
+        <hr>
 
         <!--------ACTIVITIES AND HONORS-------->
         <h2>Activities and Honors</h2>
@@ -132,22 +136,24 @@
 
 
         
-        <iframe id="resumeFrame" src="files/EthanBrownResume.pdf" title="EthanBrownResume.pdf" width="65%" height="700px"></iframe>
     </main>
+    <!-- <iframe id="resumeFrame" class = "images" src="files/EthanBrownResume.pdf" title="EthanBrownResume.pdf" width="65%" height="700px"></iframe> -->
     
     <div class="contactMe lists">
         <!-- <h1>Contact me!</h1> -->
         <ul id="text">
-            <a href="mailto:brownea1@rose-hulman.edu" target="_blank"><li>brownea1@rose-hulman.edu</li></a>
-            <a href="https://rose-hulman.joinhandshake.com/users/26444952" target="_blank"><li>Handshake</li></a>
-            <a href="https://www.linkedin.com/in/ethan-brown-8a46141b2/" target="_blank"><li>LinkedIn</li></a>
-            <a href="https://github.com/easbrown02/EthanBrown" target="_blank"><li>GitHub</li></a> 
-        </ul>
-        <ul id="icons">
-            <a href="mailto:brownea1@rose-hulman.edu" target="_blank"></a>
-            <a href="https://rose-hulman.joinhandshake.com/users/26444952" target="_blank"></a>
-            <a href="https://www.linkedin.com/in/ethan-brown-8a46141b2/" target="_blank"></a>
-            <a href="https://github.com/easbrown02/EthanBrown" target="_blank"></a> 
+            <a href="mailto:brownea1@rose-hulman.edu" target="_blank">
+                <li><img src="images/emailIcon.png" height="24px" width="24px"><p id="emailWord">E-Mail</p></li>
+            </a>
+            <a href="https://rose-hulman.joinhandshake.com/users/26444952" target="_blank">
+                <li><img src="images/handshakeIcon.png" height="24px" width="24px"><p>Handshake</p></li>
+            </a>
+            <a href="https://www.linkedin.com/in/ethan-brown-8a46141b2/" target="_blank">
+                <li><img src="images/linkedinIcon.png" height="24px" width="24px"><p>LinkedIn</p></li>
+            </a>
+            <a href="https://github.com/easbrown02/EthanBrown" target="_blank">
+                <li><img src="images/githubIcon.png" height="24px" width="24px"><p>GitHub</p></li>
+            </a> 
         </ul>
     </div>
     <footer>
