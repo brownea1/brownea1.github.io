@@ -6,7 +6,7 @@ function openNav() {
     let body = document.body;
     if(!state){
         if(screen.width <= 790)
-            sidebar.style.width = "20vw";
+            sidebar.style.width = "100vw";
         else
             sidebar.style.width = "10vw";
         btn.innerHTML = "☰ Close";

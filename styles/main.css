@@ -32,6 +32,9 @@ body {
     .contactMe p {
         display: none;
     }
+    .sidepanel {
+        background-color: var(--main-bg-color);
+    }
     body {
         grid-template-areas: "head head" 
                              "navBtn img"
