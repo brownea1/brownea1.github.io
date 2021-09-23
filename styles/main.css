@@ -40,6 +40,13 @@ body {
         grid-template-columns: 20vw 80vw;
         grid-template-rows: auto auto 1fr auto;
     }
+    #resume {
+        grid-template-areas: "navBtn head"
+                             "nav main"
+                             "foot foot";
+        grid-template-columns: 20vw 80vw;
+        padding-right: 20vw;
+    }
 }
 
 .images {
