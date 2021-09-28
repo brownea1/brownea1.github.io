@@ -16,3 +16,6 @@ function openNav() {
     }
     state = !state;
 }
+
+function main() {
+}
