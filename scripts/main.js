@@ -5,7 +5,10 @@ function openNav() {
     let sidebar = document.getElementById("mySidepanel");
     let body = document.body;
     if(!state){
-        sidebar.style.width = "10vw";
+        if(screen.width <= 790)
+            sidebar.style.width = "100vw";
+        else
+            sidebar.style.width = "10vw";
         btn.innerHTML = "☰ Close";
         // body.style.gridTemplateAreas = '"navBtn head empty" "nav main contact" "foot foot foot"';
     }
