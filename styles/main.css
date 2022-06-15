@@ -96,6 +96,8 @@ nav {
     transition: 0.5s;
     padding-top: 1em;
     padding-bottom: 1.5em;
+
+    position: relative;
 }
 .openbtn {
     grid-area: navBtn;
@@ -106,6 +108,7 @@ nav {
     color: var(--font-color);
     border: none;
 }
+
 .lists ul li a:hover {
     color: #a0a0a0;
 }
@@ -251,6 +254,7 @@ p {
 #experienceList li ul {
     list-style-type: circle;
 }
+
 /************************************
 * START BACKGROUND
 */
